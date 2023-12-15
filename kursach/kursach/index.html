@@ -1,12 +1,19 @@
+<!-- Оголошення базової HTML-структури документа -->
 <!DOCTYPE html>
 <html lang="uk">
+
 <head>
+    <!-- Метатеги, включаючи кодування та масштабування -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Підключення зовнішнього файлу стилів для дизайну -->
     <link rel="stylesheet" href="styles.css">
+    <!-- Заголовок вікна браузера -->
     <title>Калькулятор здорового способу життя</title>
 </head>
+
 <body>
+    <!-- Верхній блок документа, що містить заголовок та інструкції -->
     <header>
         <h1>Вкажіть ваші фізичні характеристики</h1>
         <p class="instructions">Щоб визначити раціон, вам потрібно:</p>
@@ -14,8 +21,10 @@
         <p class="instructions">2. Натисніть "Визначити раціон" або "Визначити оптимальні характеристики".</p>
     </header>
 
+    <!-- Основний блок документа, що містить форму та результати розрахунків -->
     <main>
         <form id="physicalCharacteristicsForm">
+            <!-- Поля для введення фізичних характеристик -->
             <label for="height">Вкажіть ваш зріст у сантиметрах:</label>
             <input type="text" id="height">
 
@@ -38,18 +47,38 @@
                 <option value="gain">Набір ваги</option>
             </select>
 
+            <!-- Кнопки для визначення раціону та оптимальних характеристик -->
             <div class="buttons">
                 <button id="calculateDiet" class="button" type="button">Визначити раціон</button>
                 <button id="calculateOptimal" class="button" type="button">Визначити оптимальні характеристики</button>
             </div>
         </form>
 
+        <!-- Меню "Раціон" для виведення результатів розрахунків -->
+        <div class="menu" id="rationMenu">
+            <h2>Ваш Раціон</h2>
+            <p>Калорії: <span id="calories">0</span></p>
+            <p>Білки: <span id="proteins">0</span></p>
+            <p>Жири: <span id="fats">0</span></p>
+            <p>Вуглеводи: <span id="carbs">0</span></p>
+        </div>
+
+        <!-- Меню "Ваші оптимальні фізичні характеристики" для виведення результатів -->
+        <div class="menu" id="optimalMenu">
+            <h2>Ваші оптимальні фізичні характеристики</h2>
+            <p>Ідеальна вага: <span id="idealWeight">0</span></p>
+            <p>Нормальний пульс: <span id="normalPulse">0</span></p>
+        </div>
+
+        <!-- Блок для виведення повідомлень про помилки -->
         <div id="errorMessage" class="hidden"></div>
+
+        <!-- Тултіп для виведення додаткової інформації користувачу -->
         <div id="tooltip" class="tooltip-text"></div>
     </main>
 
-
-
+    <!-- Підключення основного скрипта для логіки калькулятора -->
     <script src="main.js"></script>
 </body>
+
 </html>
