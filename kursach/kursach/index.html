@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Калькулятор здорового способу життя</title>
+</head>
+<body>
+    <header>
+        <h1>Вкажіть ваші фізичні характеристики</h1>
+        <p class="instructions">Щоб визначити раціон, вам потрібно:</p>
+        <p class="instructions">1. Ввести зріст, стать, вік, вагу та мету.</p>
+        <p class="instructions">2. Натисніть "Визначити раціон" або "Визначити оптимальні характеристики".</p>
+    </header>
+
+    <main>
+        <form id="physicalCharacteristicsForm">
+            <label for="height">Вкажіть ваш зріст у сантиметрах:</label>
+            <input type="text" id="height">
+
+            <label for="gender">Вкажіть вашу стать:</label>
+            <div id="genderSelection">
+                <label><input type="radio" name="gender" value="male"> Чоловік</label>
+                <label><input type="radio" name="gender" value="female"> Жінка</label>
+            </div>
+
+            <label for="age">Вкажіть ваш вік:</label>
+            <input type="number" id="age">
+
+            <label for="weight">Вкажіть вашу вагу в кілограмах:</label>
+            <input type="number" id="weight">
+
+            <label for="goal">Виберіть вашу мету:</label>
+            <select id="goal">
+                <option value="maintain">Підтримка ваги</option>
+                <option value="lose">Схуднення</option>
+                <option value="gain">Набір ваги</option>
+            </select>
+
+            <div class="buttons">
+                <button id="calculateDiet" class="button" type="button">Визначити раціон</button>
+                <button id="calculateOptimal" class="button" type="button">Визначити оптимальні характеристики</button>
+            </div>
+        </form>
+
+        <div id="errorMessage" class="hidden"></div>
+        <div id="tooltip" class="tooltip-text"></div>
+    </main>
+
+
+
+    <script src="main.js"></script>
+</body>
+</html>

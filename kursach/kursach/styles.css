@@ -1,0 +1,99 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #333;
+    color: white;
+    margin: 0;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.instructions {
+    font-style: italic;
+}
+
+main {
+    margin: 20px;
+}
+
+.buttons {
+    margin-top: 10px;
+}
+
+.tooltip-text {
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    z-index: 1;
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+.button {
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: #00557e;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 8px;
+}
+
+input,
+select {
+    margin-bottom: 16px;
+    padding: 8px;
+    font-size: 16px;
+    color: #333;
+    background-color: white;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+#errorMessage {
+    display: none;
+    color: #e74c3c;
+    margin-top: 10px;
+}
